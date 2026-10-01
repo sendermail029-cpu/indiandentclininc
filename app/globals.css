@@ -65,3 +65,17 @@ button:focus-visible {
 [class^="blur-["] {
   will-change: transform;
 }
+
+/* Never allow sideways scrolling on phones: slide-in animations start a few
+   px off-screen, which used to widen the page and let it pan horizontally.
+   "clip" (unlike "hidden") keeps position: sticky working. */
+html,
+body {
+  overflow-x: hidden;
+}
+@supports (overflow: clip) {
+  html,
+  body {
+    overflow-x: clip;
+  }
+}

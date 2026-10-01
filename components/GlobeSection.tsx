@@ -90,6 +90,16 @@ export default function GlobeSection({ banner = true }: { banner?: boolean }) {
     setIndex((i) => (i + 1) % total);
   }
 
+  // Only load the 3D globe on screens wider than a phone
+  const [showGlobe, setShowGlobe] = useState(false);
+  useEffect(() => {
+    const mq = window.matchMedia("(min-width: 640px)");
+    const update = () => setShowGlobe(mq.matches);
+    update();
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
+  }, []);
+
   // Autoplay only while the section is on screen
   const sectionRef = useRef<HTMLElement>(null);
   const inView = useInView(sectionRef, { margin: "100px 0px" });
@@ -293,7 +303,8 @@ export default function GlobeSection({ banner = true }: { banner?: boolean }) {
             </div>
           </div>
 
-          <div className="relative">
+          {/* Globe: hidden on phones (and its 3D code is never downloaded there) */}
+          <div className="relative hidden sm:block">
             <div
               aria-hidden
               className="pointer-events-none absolute inset-0 mx-auto flex max-w-[420px] items-center justify-center"
@@ -307,6 +318,7 @@ export default function GlobeSection({ banner = true }: { banner?: boolean }) {
               <div className="h-[90%] w-[90%] rounded-full border border-dashed border-gold/30" />
             </div>
 
+            {showGlobe && (
             <Globe3D
               className="mx-auto h-[320px] w-full max-w-[420px] sm:h-[380px] md:h-[440px]"
               config={{
@@ -317,6 +329,7 @@ export default function GlobeSection({ banner = true }: { banner?: boolean }) {
               }}
               markers={globeMarkers}
             />
+            )}
 
             <div className="absolute bottom-0 left-1/2 flex max-w-[92vw] -translate-x-1/2 items-center gap-2 rounded-full text-center sm:whitespace-nowrap border border-ink/10 bg-porcelain/85 px-4 py-2 text-xs font-medium text-ink shadow-[0_10px_30px_-12px_rgba(20,21,27,0.35)] backdrop-blur-md">
               <MapPin size={13} className="text-coral" />

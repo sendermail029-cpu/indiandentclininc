@@ -262,7 +262,7 @@ export default function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-              className="absolute inset-y-0 right-0 flex w-full max-w-md flex-col overflow-y-auto bg-gradient-to-br from-[#0A0B0E] via-ink to-ink-soft text-white"
+              className="absolute inset-y-0 right-0 flex w-full max-w-md flex-col overflow-y-auto overflow-x-hidden overscroll-contain bg-gradient-to-br from-[#0A0B0E] via-ink to-ink-soft text-white"
               aria-label="Mobile menu"
             >
               <span aria-hidden className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full bg-coral/25 blur-[100px]" />
