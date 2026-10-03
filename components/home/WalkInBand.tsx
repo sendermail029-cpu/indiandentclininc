@@ -52,7 +52,7 @@ export default function WalkInBand() {
               <Phone size={17} /> Call {clinic.phones[0]}
             </a>
             <a
-              href={`https://wa.me/91${clinic.phones[0]}`}
+              href={`https://wa.me/91${clinic.whatsapp}`}
               target="_blank"
               rel="noreferrer"
               className="flex items-center gap-2 rounded-full border border-white/25 bg-white/[0.06] px-6 py-3.5 text-[15px] text-white backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:border-[#25D366] hover:bg-[#25D366]"

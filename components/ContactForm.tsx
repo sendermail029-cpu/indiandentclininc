@@ -21,7 +21,7 @@ export default function ContactForm({ embedded = false }: { embedded?: boolean }
     ].join("\n");
     // Navigate in the same tab: opens the WhatsApp app on phones and
     // WhatsApp Web / desktop on computers, and can't be caught by popup blockers.
-    window.location.href = `https://wa.me/91${clinic.phones[0]}?text=${encodeURIComponent(text)}`;
+    window.location.href = `https://wa.me/91${clinic.whatsapp}?text=${encodeURIComponent(text)}`;
   }
 
   const inputClass =

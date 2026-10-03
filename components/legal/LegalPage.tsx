@@ -102,7 +102,7 @@ export default function LegalPage({
                     <Phone size={15} /> +91 {clinic.phones[0]}
                   </a>
                   <a
-                    href={`https://wa.me/91${clinic.phones[0]}`}
+                    href={`https://wa.me/91${clinic.whatsapp}`}
                     target="_blank"
                     rel="noreferrer"
                     className="flex items-center gap-2 rounded-full bg-white px-5 py-3 text-[14px] font-semibold text-ink ring-1 ring-ink/10 hover:ring-ink/25"

@@ -72,7 +72,7 @@ export default function BookingModal() {
     lines.push(`Preferred date: ${niceDate}`, `Preferred time: ${time}`);
     if (message.trim()) lines.push("", `Message: ${message.trim()}`);
     const text = lines.join("\n");
-    window.open(`https://wa.me/91${clinic.phones[0]}?text=${encodeURIComponent(text)}`, "_blank", "noopener");
+    window.open(`https://wa.me/91${clinic.whatsapp}?text=${encodeURIComponent(text)}`, "_blank", "noopener");
     close();
   }
 

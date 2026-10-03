@@ -23,11 +23,11 @@ export default function FounderSpotlight() {
             <div className="absolute -inset-3 rotate-3 rounded-[2.25rem] bg-gradient-to-br from-coral/25 to-[#F4B48C]/20" />
             <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] shadow-2xl shadow-ink/20">
               <Image
-                src="/hospital.webp"
+                src="/hospital1.png"
                 alt="Indian Dental & Cosmetology Clinic building, Vijayawada"
                 fill
                 sizes="(min-width: 1024px) 420px, 90vw"
-                className="object-cover object-[center_60%]"
+                className="object-cover object-[center_25%]"
               />
             </div>
             <div className="absolute -bottom-5 left-1/2 flex w-max -translate-x-1/2 items-center gap-3 rounded-2xl bg-white px-4 py-3 shadow-xl shadow-ink/10">

@@ -64,7 +64,7 @@ export default function CtaBand() {
                     <CalendarCheck size={17} /> Book an appointment
                   </BookButton>
                   <a
-                    href={`https://wa.me/91${clinic.phones[0]}`}
+                    href={`https://wa.me/91${clinic.whatsapp}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 rounded-full border border-porcelain/25 bg-white/5 px-6 py-3.5 text-[15px] backdrop-blur transition-all hover:-translate-y-0.5 hover:bg-white/10"

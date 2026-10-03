@@ -19,7 +19,7 @@ import { breadcrumbJsonLd, jsonLdScript, pageMeta } from "@/lib/seo";
 export const metadata: Metadata = pageMeta({
   title: "Contact Us & Directions",
   description:
-    "Book an appointment at Indian Dental & Cosmetology Clinic, Prabhas College Main Road, Kedareswararaopet, Vijayawada. Call +91 8121010207 or WhatsApp — open 9:30 AM to 8:30 PM, all days.",
+    "Book an appointment at Indian Dental & Cosmetology Clinic, Prabhas College Main Road, Kedareswararaopet, Vijayawada. Call +91 9293922363 or WhatsApp — open 9:30 AM to 8:30 PM, all days.",
   path: "/contact",
   keywords: ["contact dental clinic Vijayawada","book dentist appointment Vijayawada","dental clinic Kedareswararaopet","Indian Dental clinic phone number"],
   image: { url: "/gallery/contacthome.webp", width: 1456, height: 1080, alt: "Indian Dental & Cosmetology Clinic, Vijayawada" },
@@ -32,7 +32,7 @@ const socialLinks = [
   { icon: Instagram, label: "Instagram", href: clinic.social.instagram },
   { icon: Facebook, label: "Facebook", href: clinic.social.facebook },
   { icon: Youtube, label: "YouTube", href: clinic.social.youtube },
-  { icon: MessageCircle, label: "WhatsApp", href: `https://wa.me/91${clinic.phones[0]}` },
+  { icon: MessageCircle, label: "WhatsApp", href: `https://wa.me/91${clinic.whatsapp}` },
   { icon: Mail, label: "Email", href: `mailto:${clinic.email}` },
 ];
 

@@ -79,3 +79,15 @@ body {
     overflow-x: clip;
   }
 }
+
+/* Phones (especially iPhone Safari) struggle with very large blur filters.
+   Use a smaller blur radius there and skip the extra GPU layers. */
+@media (max-width: 767px) {
+  .blur-2xl,
+  .blur-3xl,
+  [class*=" blur-["],
+  [class^="blur-["] {
+    --tw-blur: blur(40px);
+    will-change: auto;
+  }
+}

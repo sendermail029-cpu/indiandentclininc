@@ -85,8 +85,8 @@ export default function AboutPage() {
       >
         <Aos effect="zoom-out" duration={2.4} className="absolute inset-0">
           <Image
-            src="/indiandental (11).webp"
-            alt="Dr. Durga Prasad with the clinic team"
+            src="/about.jpeg"
+            alt="The Indian Dental & Cosmetology Clinic team"
             fill
             priority
             sizes="100vw"

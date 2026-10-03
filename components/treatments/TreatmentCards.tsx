@@ -50,6 +50,7 @@ export type TreatmentCategory = keyof typeof DATA;
 
 const ICONS: Record<string, LucideIcon> = {
   // Dental
+  invisalign: Smile,
   "laser-dentistry": Zap,
   implantology: Anchor,
   "zirconia-crowns": Crown,

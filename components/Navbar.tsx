@@ -60,12 +60,13 @@ const links: NavLink[] = [
 
 const mobileLinks = links.filter((l) => !l.children);
 
+// Quick, light stagger so the menu is fully built within ~0.3s
 const drawerItem = {
-  hidden: { opacity: 0, x: 40 },
+  hidden: { opacity: 0, x: 14 },
   show: (i: number) => ({
     opacity: 1,
     x: 0,
-    transition: { delay: 0.12 + i * 0.05, duration: 0.5, ease: [0.16, 1, 0.3, 1] },
+    transition: { delay: 0.04 + i * 0.02, duration: 0.22, ease: [0.16, 1, 0.3, 1] },
   }),
 };
 
@@ -251,22 +252,22 @@ export default function Navbar() {
             className="fixed inset-0 z-40 lg:hidden"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            exit={{ opacity: 0, transition: { duration: 0.25, delay: 0.1 } }}
+            exit={{ opacity: 0, transition: { duration: 0.18 } }}
           >
             {/* Backdrop */}
-            <div className="absolute inset-0 bg-[#0A0B0E]/50 backdrop-blur-sm" onClick={() => setOpen(false)} />
+            <div className="absolute inset-0 bg-[#0A0B0E]/60" onClick={() => setOpen(false)} />
 
             {/* Panel */}
             <motion.nav
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
-              transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-              className="absolute inset-y-0 right-0 flex w-full max-w-md flex-col overflow-y-auto overflow-x-hidden overscroll-contain bg-gradient-to-br from-[#0A0B0E] via-ink to-ink-soft text-white"
+              transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
+              className="absolute inset-y-0 right-0 flex w-full max-w-md flex-col overflow-y-auto overflow-x-hidden overscroll-contain will-change-transform bg-gradient-to-br from-[#0A0B0E] via-ink to-ink-soft text-white"
               aria-label="Mobile menu"
             >
-              <span aria-hidden className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full bg-coral/25 blur-[100px]" />
-              <span aria-hidden className="pointer-events-none absolute -bottom-24 -left-16 h-72 w-72 rounded-full bg-[#2B5CAB]/20 blur-[100px]" />
+              <span aria-hidden className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-[radial-gradient(closest-side,rgba(193,101,46,0.28),transparent)]" />
+              <span aria-hidden className="pointer-events-none absolute -bottom-36 -left-28 h-96 w-96 rounded-full bg-[radial-gradient(closest-side,rgba(43,92,171,0.24),transparent)]" />
 
               <div className="relative flex-1 px-7 pb-8 pt-28">
                 {/* Main links */}
@@ -340,7 +341,7 @@ export default function Navbar() {
                     <Phone size={16} className="text-coral" /> Call us
                   </a>
                   <a
-                    href={`https://wa.me/91${clinic.phones[0]}`}
+                    href={`https://wa.me/91${clinic.whatsapp}`}
                     target="_blank"
                     rel="noreferrer"
                     className="flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/[0.06] py-3 text-[14px] font-medium"

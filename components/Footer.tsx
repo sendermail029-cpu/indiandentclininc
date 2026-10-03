@@ -36,7 +36,7 @@ const socials = [
   { icon: Instagram, label: "Instagram", href: clinic.social.instagram },
   { icon: Facebook, label: "Facebook", href: clinic.social.facebook },
   { icon: Youtube, label: "YouTube", href: clinic.social.youtube },
-  { icon: MessageCircle, label: "WhatsApp", href: `https://wa.me/91${clinic.phones[0]}` },
+  { icon: MessageCircle, label: "WhatsApp", href: `https://wa.me/91${clinic.whatsapp}` },
 ];
 
 function Heading({ children }: { children: React.ReactNode }) {

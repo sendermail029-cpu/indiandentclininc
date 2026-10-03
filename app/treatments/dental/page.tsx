@@ -107,7 +107,7 @@ export default function DentalTreatmentsPage() {
               </h2>
             </div>
           </Reveal>
-          <TreatmentCards category="dental" />
+          <TreatmentCards category="dental" layout="tiles" />
         </div>
       </section>
 

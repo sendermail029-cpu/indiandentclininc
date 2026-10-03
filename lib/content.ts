@@ -9,7 +9,8 @@ export const clinic = {
     "https://www.google.com/maps/dir//Indian+Dental+cosmetology+clinic,+beside+college+kederesrao+pet,+Main+Rd,+Andhra+Prabha+Colony,+Vijayawada,+Andhra+Pradesh+520003/@16.5258376,80.6659834,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3a35e5585fe40f71:0x57b83caa657cbedb!2m2!1d80.6263817!2d16.5254303",
   mapsEmbedUrl:
     "https://www.google.com/maps?q=16.5254303,80.6263817+(Indian+Dental+%26+Cosmetology+Clinic)&z=17&output=embed",
-  phones: ["8121010207", "9293922363"],
+  phones: ["9293922363", "8121010207"],
+  whatsapp: "8121010207",
   email: "indiandentalcarevja@gmail.com",
   social: {
     instagram: "https://www.instagram.com/clinicindiandental/",
@@ -109,6 +110,14 @@ export const doctors = [
 ];
 
 export const dentalTreatments = [
+  {
+    slug: "invisalign",
+    name: "Invisalign Clear Aligners",
+    detail: "Straighten your teeth without wires or brackets.",
+    description:
+      "Invisalign uses a series of clear, custom-made aligners that gently move your teeth into place. They are almost invisible, can be removed to eat and brush, and every stage is planned digitally so you can see your new smile before you begin.",
+    benefits: ["Nearly invisible", "Removable", "Digitally planned"],
+  },
   {
     slug: "laser-dentistry",
     name: "Dental Laser Dentistry",
